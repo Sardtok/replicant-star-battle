@@ -1,0 +1,13 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.12.0"}
+        http-kit/http-kit {:mvn/version "2.8.0"}
+        no.cjohansen/replicant {:mvn/version "0.2024.10.07"}}
+ :aliases
+ {:run {:main-opts ["-m" "chickensoft.star-battle"]}
+  :nextjournal/garden {:exec-fn chickensoft.star-battle/-main}
+  :build {:deps {io.github.clojure/tools.build
+                 {:mvn/version "0.10.5"}}
+          :ns-default build}
+  :test {:extra-paths ["test"]
+         :extra-deps {lambdaisland/kaocha {:mvn/version "1.91.1392"}}
+         :main-opts ["-m" "kaocha.runner"]}}}
