@@ -1,0 +1,54 @@
+:root {
+    --bg-color-1: black;
+    --bg-color-2: #112;
+    --border-color-1: #224;
+    --border-color-2: #422;
+    --text-color-1: white;
+    --text-color-2: #ffd;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+html {
+    font-size: 12pt;
+    background-color: var(--bg-color-1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color-1);
+    margin: 2em auto;
+}
+
+.game {
+    background-color: var(--bg-color-2);
+    border: 2px solid var(--border-color-1);
+    border-radius: 10px;
+    width: 50vw;
+    height: 50vh;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color-1: black;
+        --bg-color-2: #112;
+        --border-color-1: #224;
+        --border-color-2: #422;
+        --text-color-1: white;
+        --text-color-2: #ffd;
+    }
+}
+
+@media  (prefers-color-scheme: light) {
+    :root {
+        --bg-color-1: white;
+        --bg-color-2: #ffd;
+        --border-color-1: #633;
+        --border-color-2: #336;
+        --text-color-1: black;
+        --text-color-2: #112;
+    }
+}

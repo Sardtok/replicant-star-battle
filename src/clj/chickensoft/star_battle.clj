@@ -1,9 +1,13 @@
 (ns chickensoft.star-battle
-  (:require [org.httpkit.server :as server]))
+  (:require [clojure.string :as s]
+            [org.httpkit.server :as server]
+            [ring.util.response :as response]
+            [shadow.cljs.devtools.api :as shadow]))
 
 (defn handler [req]
-  {:handler 200
-   :body "The battle is commencing soon."})
+  (let [path (subs (:uri req) 1)
+        path (if (s/blank? path) "index.html" path)]
+    (response/file-response path {:root "resources"})))
 
 (defn start-server! []
   (server/run-server #'handler {:legacy-return-value? false
@@ -11,5 +15,10 @@
 
 (defn -main
   "Start the http-kit webserver"
-  [& _]
-  (start-server!))
+  [& args]
+  (when-not (seq args)
+    (println "Building release version of ClojureScript client code")
+    (shadow/release! :cljs))
+  (println "Starting server on port 7777")
+  (start-server!)
+  (println "http-kit server is running"))
