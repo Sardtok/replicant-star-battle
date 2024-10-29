@@ -16,9 +16,6 @@
 (defn -main
   "Start the http-kit webserver"
   [& args]
-  (when-not (seq args)
-    (println "Building release version of ClojureScript client code")
-    (shadow/release! :cljs))
   (println "Starting server on port 7777")
   (start-server!)
   (println "http-kit server is running"))
