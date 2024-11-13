@@ -2,9 +2,15 @@
     --bg-color-1: black;
     --bg-color-2: #112;
     --border-color-1: #224;
-    --border-color-2: #422;
+    --border-color-2: #300;
     --text-color-1: white;
     --text-color-2: #ffd;
+    --region-color-1: #632;
+    --region-color-2: #360;
+    --region-color-3: #236;
+    --region-color-4: #662;
+    --region-color-5: #255;
+    --region-color-6: #525;
 }
 
 *, *:before, *:after {
@@ -23,35 +29,89 @@ html {
 h1 {
     text-align: center;
     color: var(--text-color-1);
-    margin: 2em auto;
+    margin: 1em auto;
 }
 
 .game {
-    background-color: var(--bg-color-2);
-    border: 2px solid var(--border-color-1);
-    border-radius: 10px;
-    width: 50vw;
-    height: 50vh;
+    padding: 10px;
+    aspect-ratio: 1 / 1;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-color-1: black;
-        --bg-color-2: #112;
-        --border-color-1: #224;
-        --border-color-2: #422;
-        --text-color-1: white;
-        --text-color-2: #ffd;
+.grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: var(--border-color-2);
+    border: 4px solid var(--border-color-2);
+    border-radius: 8px;
+}
+
+.grid-5x5 {
+    grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+}
+
+.grid > .row {
+    display: contents;
+}
+
+.cell {
+    border: 2px solid var(--border-color-2);
+    width: 100%;
+    height: 100%;
+}
+
+.region-1 {
+    background-color: var(--region-color-1);
+}
+
+.region-2 {
+    background-color: var(--region-color-2);
+    border-radius: 25%;
+}
+
+.region-3 {
+    background-color: var(--region-color-3);
+    border-radius: 25% 0 0 0;
+}
+
+.region-4 {
+    background-color: var(--region-color-4);
+    border-radius: 0 25% 0 0;
+}
+
+.region-5 {
+    background-color: var(--region-color-5);
+    border-radius: 0 0 25% 0;
+}
+
+@media (orientation: landscape) {
+    h1 {
+        margin: 0.5em auto;
+    }
+    .game {
+        height: 80dvh;
+    }
+}
+
+@media (orientation: portrait) {
+    .game {
+        width: 80dvw;
     }
 }
 
 @media  (prefers-color-scheme: light) {
     :root {
-        --bg-color-1: white;
+        --bg-color-1: #fed;
         --bg-color-2: #ffd;
         --border-color-1: #633;
-        --border-color-2: #336;
+        --border-color-2: #213;
         --text-color-1: black;
         --text-color-2: #112;
+        --region-color-1: #632;
+        --region-color-2: #360;
+        --region-color-3: #236;
+        --region-color-4: #662;
+        --region-color-5: #355;
+        --region-color-6: #525;
     }
 }
