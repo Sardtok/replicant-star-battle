@@ -1,7 +1,9 @@
 (ns chickensoft.star-battle.core
   (:require [replicant.dom :as dom]))
 
-(defn ^export run []
+(defn ^:export
+      ^:dev/after-load
+      run []
       (dom/render
         (.getElementById js/document "root")
         [:div
