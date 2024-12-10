@@ -3,11 +3,7 @@
             [chickensoft.star-battle.components.grid :as grid]
             [clojure.pprint :as pprint]))
 
-(def db (atom {:board [[{:region 1 :content :mark} {:region 2 :content nil} {:region 3 :content nil} {:region 3 :content :mark} {:region 3 :content nil}]
-                       [{:region 1 :content nil} {:region 2 :content nil} {:region 2 :content :mark} {:region 4 :content :mark} {:region 5 :content nil}]
-                       [{:region 1 :content :mark} {:region 1 :content nil} {:region 2 :content nil} {:region 4 :content nil} {:region 5 :content nil}]
-                       [{:region 1 :content nil} {:region 4 :content nil} {:region 4 :content nil} {:region 4 :content nil} {:region 5 :content nil}]
-                       [{:region 1 :content nil} {:region 1 :content nil} {:region 5 :content nil} {:region 5 :content nil} {:region 5 :content nil}]]}))
+(def db (atom {}))
 
 (defn prepare-cell [cell]
       (let [{:keys [region content]} cell]

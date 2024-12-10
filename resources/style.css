@@ -26,6 +26,11 @@ html {
     overflow: clip;
 }
 
+#canvas {
+    width: 80cqmax;
+    height: 80cqmax;
+}
+
 h1 {
     text-align: center;
     color: var(--text-color-1);
