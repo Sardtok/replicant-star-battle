@@ -1,6 +1,6 @@
 (ns user
-  (:require [clojure.java.process :as proc]
-            [clojure.string :as s]))
+  (:require [chickensoft.star-battle]
+            [clojure.java.process :as proc]))
 
 (defn require-shadow []
   (require '[shadow.cljs.devtools.api :as shadow]
@@ -52,3 +52,8 @@
                                   "git" "reset" "--hard" "HEAD~")
   (run-cmd-or-exit-with-error-msg "Could not pop stashed changes."
                                   "git" "stash" "pop"))
+
+; Set the JVM property start-server to true (-Dstart-server=true) to start the server in dev environments
+; This is useful for running an nRepl from your IDE, while also starting the server, as the main from the run alias can break nRepl startup
+(when (= "true" (System/getProperty "start-server"))
+  (chickensoft.star-battle/-main))
