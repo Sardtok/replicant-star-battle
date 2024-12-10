@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100%" height="100%"
+     viewBox="0 0 512 512"
+     version="1.1"
+     xml:space="preserve"
+     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns="http://www.w3.org/2000/svg">
+<defs id="defs2">
+    <linearGradient id="linearGradient3">
+        <stop style="stop-color:#e0ff00;stop-opacity:1;"
+              offset="0"
+              id="stop3"/>
+        <stop style="stop-color:#ff9700;stop-opacity:1;"
+              offset="1"
+              id="stop4"/>
+        </linearGradient>
+    <radialGradient xlink:href="#linearGradient3"
+                    id="radialGradient4"
+                    cx="191.54392"
+                    cy="152.49271"
+                    fx="191.54392"
+                    fy="152.49271"
+                    r="209.15511"
+                    gradientTransform="matrix(1,0,0,0.96241709,0,5.7311194)"
+                    gradientUnits="userSpaceOnUse"/>
+</defs>
+<path style="fill:url(#radialGradient4);stroke:#530000;stroke-opacity:1;stroke-width:2;stroke-dasharray:none"
+      id="path3"
+      d="M 329.44611,343.8806 198.01745,280.78773 71.534138,353.2872 90.925338,208.79435 -17.111248,110.90514 126.30183,84.696522 186.01486,-48.301806 255.25781,79.993228 400.19908,95.684947 299.5805,201.18426 Z"
+      transform="translate(59.011609,96.371476)"/>
+</svg>
