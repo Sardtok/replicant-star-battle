@@ -122,7 +122,7 @@ h1 {
     border-top-left-radius: 3px;
 }
 
-.other-region-top-right:not(.other-right):not(.other-region-top) {
+.other-region-top-right:not(.other-region-right):not(.other-region-top) {
     border-top-right-radius: 3px;
 }
 
@@ -130,7 +130,7 @@ h1 {
     border-bottom-left-radius: 3px;
 }
 
-.other-region-bottom-right:not(.other-right):not(.other-region-bottom) {
+.other-region-bottom-right:not(.other-region-right):not(.other-region-bottom) {
     border-bottom-right-radius: 3px;
 }
 
