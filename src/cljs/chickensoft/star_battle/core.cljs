@@ -27,7 +27,10 @@
                    (when (not= region (get-in board [(dec row) (dec col) :region]))
                      :other-region-top-left)
                    (when (= content :mark) :marked)]
-         :img (when (= content :star) "/images/star.svg")}))
+         :img (case content
+                :star "/images/star.svg"
+                :mark "/images/cross.svg"
+                nil)}))
 
 (defn prepare-row [board row]
   {::components/kind ::components/row
