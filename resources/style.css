@@ -11,6 +11,10 @@
     --region-color-4: #662;
     --region-color-5: #255;
     --region-color-6: #525;
+    --region-color-7: #368;
+    --region-color-8: #883;
+    --region-color-9: #377;
+    --region-color-10: #836;
 }
 
 *, *:before, *:after {
@@ -55,6 +59,26 @@ h1 {
     grid-template: repeat(5, 1fr) / repeat(5, 1fr);
 }
 
+.grid-6x6 {
+    grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+}
+
+.grid-7x7 {
+    grid-template: repeat(7, 1fr) / repeat(7, 1fr);
+}
+
+.grid-8x8 {
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+}
+
+.grid-9x9 {
+    grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+}
+
+.grid-10x10 {
+    grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+}
+
 .grid > .row {
     display: contents;
 }
@@ -84,6 +108,26 @@ h1 {
 
 .region-5 {
     --bg-color: var(--region-color-5);
+}
+
+.region-6 {
+    --bg-color: var(--region-color-6);
+}
+
+.region-7 {
+    --bg-color: var(--region-color-7);
+}
+
+.region-8 {
+    --bg-color: var(--region-color-8);
+}
+
+.region-9 {
+    --bg-color: var(--region-color-9);
+}
+
+.region-10 {
+    --bg-color: var(--region-color-10);
 }
 
 .other-region-left {
