@@ -11,5 +11,5 @@
     </radialGradient>
 </defs>
 <path style="fill:url(#radial);stroke:#530000;stroke-opacity:1;stroke-width:2;stroke-dasharray:none"
-      d="M 256,0 331,152 499,177 378,296 406,463 256,384 106,463 134,296 13,177 181,152 Z"/>
+      d="M 256,16 331,168 499,193 378,312 406,479 256,400 106,479 134,312 13,193 181,168 Z" />
 </svg>
